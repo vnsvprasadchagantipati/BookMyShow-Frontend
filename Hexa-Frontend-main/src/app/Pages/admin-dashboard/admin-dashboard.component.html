@@ -1,0 +1,36 @@
+<div class="container-fluid" id="main">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
+            <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
+                <li class="nav-item"><a class="nav-link" [routerLink]="'addcity'">Add City</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'getallcities'">Get All Cities</a>
+                </li>
+                <li class="nav-item"><a class="nav-link"[routerLink]="'getallmultiplexesadmin'">Get All Multiplexes</a></li>
+                <li class="nav-item"><a class="nav-link"[routerLink]="'addmultiplex'">Add Multiplex</a></li>
+                <li class="nav-item"><a class="nav-link"[routerLink]="'getallmovies'">Get All Movies</a></li>
+                <li class="nav-item"><a class="nav-link"[routerLink]="'addmovie'">Add Movie</a></li>
+                <!-- <li class="nav-item"><a class="nav-link"[routerLink]="'getmoviebyid/:mid'">Get Movie By ID</a></li> -->
+                <li class="nav-item"><a class="nav-link"[routerLink]="'getallshows'">Get All Shows</a></li>
+                <li class="nav-item"><a class="nav-link"[routerLink]="'addshow'">Add Show</a></li>
+            
+                <!-- <li class="nav-item"><a class="nav-link"[routerLink]="'getshowbyid/:mid'">Get Show By ID</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link"[routerLink]="'getallbookingsadmin'">Get All Bookings</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" [routerLink]="'login'">LogOut</a></li> -->
+                <li class="nav-item">
+                    <button class="nav-link btn btn-link" (click)="logout()">LogOut</button>
+                </li>
+                
+
+
+            </ul>
+        </div>
+        <!--/col-->
+
+        <div class="col main pt-5 mt-3">
+            <router-outlet></router-outlet>
+
+        </div>
+        <!--/main col-->
+    </div>
+
+</div>

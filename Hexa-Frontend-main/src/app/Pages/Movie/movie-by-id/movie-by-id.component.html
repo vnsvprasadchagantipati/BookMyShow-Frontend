@@ -1,0 +1,48 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <!-- <tr>
+            <td>
+                <label>Movie ID</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="movieID" class="form-control">
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="getmoviebyid()">Search</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span style="color: red;">{{errMsg}}</span>
+            </td>
+        </tr> -->
+    </table>
+    <hr>
+    <table class="table" *ngIf="isMovieExist">
+        <tr>
+            <td>Movie ID</td>
+            <td>
+                <input type="number" [(ngModel)]="movie.movieID" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Movie Name</td>
+            <td>
+                <input type="text" [(ngModel)]="movie.movName"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Release Date</td>
+            <td>
+                <input type="Date" [(ngModel)]="movie.releaseDate"  class="form-control"[value]="movie.releaseDate | date:'yyyy-MM-dd'">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" (click)="edit()">Edit</button> &nbsp;
+                <button class="btn btn-primary" (click)="delete()">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+    <table class="table">
+        <!-- <tr>
+            <td>Show ID</td>
+            <td>
+                <input type="number" [(ngModel)]="show.showID">
+            </td>
+        </tr> -->
+        <tr>
+            <td>Multiplex ID</td>
+            <td>
+                <input type="number" [(ngModel)]="show.mulID">
+            </td>
+        </tr>
+        <tr>
+            <td>Movie ID</td>
+            <td>
+                <input type="number" [(ngModel)]="show.movieID">
+            </td>
+        </tr>
+        <tr>
+            <td>Show DateTime</td>
+            <td>
+                <input type="Date" [(ngModel)]="show.showDateTime">
+            </td>
+        </tr>
+        <tr>
+            <td>Show Timing</td>
+            <td>
+                <input type="text" [(ngModel)]="show.showTiming">
+            </td>
+        </tr>
+        <tr>
+            <td>Available Seats</td>
+            <td>
+                <input type="number" [(ngModel)]="show.availableSeats">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="addShow()">Add</button>
+            </td>
+        </tr>
+
+    </table>
+</div>

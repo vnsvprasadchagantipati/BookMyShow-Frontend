@@ -1,0 +1,42 @@
+<div class="container">
+    <table class="table">
+        <!-- <tr>
+            <td>Booking DateTime</td>
+            <td>
+                <input type="datetime-local" [(ngModel)]="booking.bookingDateTime">
+            </td>
+        </tr> -->
+        <tr>
+            <td>Number of Tickets</td>
+            <td>
+                <input type="number" [(ngModel)]="quantity" (change)="calculateAmount()">
+            </td>
+        </tr>
+        <tr>
+            <td>Amount</td>
+            <td>
+                <input type="number" [(ngModel)]="amount" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td>Total Amount</td>
+            <td>
+                <input type="number" [(ngModel)]="booking.amount">
+            </td>
+        </tr>
+        <tr>
+            <td>Coupon Code</td>
+            <td>
+                <select [(ngModel)]="couponCode">
+                    <option *ngFor="let coupon of availableCoupons" [value]="coupon.code">{{ coupon.code }}</option>
+                </select>
+                <button class="btn btn-secondary" (click)="applyCoupon()">Apply Coupon</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" (click)="addBooking()">Book Movie</button>
+            </td>
+        </tr>
+    </table>
+</div>

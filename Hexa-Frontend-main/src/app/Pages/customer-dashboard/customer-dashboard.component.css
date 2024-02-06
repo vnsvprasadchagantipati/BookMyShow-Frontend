@@ -1,0 +1,48 @@
+/* Sidebar styles */
+.sidebar-offcanvas {
+    border-right: 1px solid #ddd; /* Add a border to the sidebar */
+    height: 100vh; /* Set sidebar height to full viewport height */
+}
+
+.sidebar-offcanvas ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-offcanvas li {
+    margin-bottom: 10px;
+}
+
+.sidebar-offcanvas a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-offcanvas a:hover {
+    background-color: #f5f5f5; /* Change background color on hover */
+}
+
+/* Main content styles */
+.main {
+    padding-top: 70px; /* Adjust top padding to avoid overlapping with fixed navbar */
+    min-height: 100vh; /* Ensure the content area covers the full viewport height */
+}
+
+/* Additional styles (modify as needed) */
+/* For example, button styles */
+.nav-link.btn {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-link.btn:hover {
+    color: #555;
+}

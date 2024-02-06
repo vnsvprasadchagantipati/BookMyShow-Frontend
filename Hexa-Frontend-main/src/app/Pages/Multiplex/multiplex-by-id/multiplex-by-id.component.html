@@ -1,0 +1,54 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <tr>
+            <td>
+                <label>Multiplex ID</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="mulID" class="form-control">
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="multiplexbyid()">Search</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span style="color: red;">{{errMsg}}</span>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table class="table" *ngIf="isMultiplexExist">
+        <tr>
+            <td>Multiplex ID</td>
+            <td>
+                <input type="number" [(ngModel)]="multiplex.mulID" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Multiplex Name</td>
+            <td>
+                <input type="text" [(ngModel)]="multiplex.mulName"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>CityID</td>
+            <td>
+                <input type="number" [(ngModel)]="multiplex.cityID"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Screen Number</td>
+            <td>
+                <input type="number" [(ngModel)]="multiplex.screenNumber"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" (click)="edit()">Edit</button> &nbsp;
+                <button class="btn btn-primary" (click)="delete()">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+</div>

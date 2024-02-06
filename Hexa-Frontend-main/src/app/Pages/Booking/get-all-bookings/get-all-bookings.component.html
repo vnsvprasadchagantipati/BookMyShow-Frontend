@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Movie Booking Details</h2>
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>Booking ID</th>
+                <th>Amount</th>
+                <!-- <th>Booking DateTime</th> -->
+                <th>Show ID</th>
+                <th>User ID</th>
+            
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let booking of bookings">
+                <td>{{booking.bookingID}}</td>
+                <td>{{booking.amount}}</td>
+                <!-- <td>{{booking.bookingDateTime|date:'dd/MM/YYYY'}}</td> -->
+                <td>{{booking.showID}}</td>
+                <td>{{booking.userID}}</td>
+                
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

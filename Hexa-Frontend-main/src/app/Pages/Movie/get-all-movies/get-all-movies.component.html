@@ -1,0 +1,30 @@
+<div class="container">
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <!-- <th>Movie ID</th> -->
+                <th>Movie Name</th>
+                <th>Release Date</th>
+                <th>Image Poster</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let movie of movies">
+                <!-- <td>{{movie.movieID}}</td> -->
+                <td>{{movie.movName}}</td>
+                <td>{{movie.releaseDate|date:'dd/MM/YYYY'}}</td>
+                <td>
+                    <img src="http://localhost:5217/Resources/Images/{{movie.imageUrl}}" alt="" width="100" height="100">
+                </td>
+
+                
+                <td>
+                    <button class="btn btn-info" (click)="getId(movie.movieID)">Edit</button> &nbsp;
+                    <button class="btn btn-primary" (click)="delete(movie.movieID)">Delete</button> &nbsp;
+                    <button class="btn btn-secondary" (click)="getId(movie.movieID)">View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

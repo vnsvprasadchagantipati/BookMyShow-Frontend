@@ -1,0 +1,42 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <tr>
+            <td>
+                <label>CityID</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="cityID" class="form-control">
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="search()">Search</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span style="color: red;">{{errMsg}}</span>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table class="table" *ngIf="isCityExist">
+        <tr>
+            <td>CityID</td>
+            <td>
+                <input type="number" [(ngModel)]="city.cityID" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>City Name</td>
+            <td>
+                <input type="text" [(ngModel)]="city.cityName"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" (click)="edit()">Edit</button> &nbsp;
+                <button class="btn btn-primary" (click)="delete()">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+</div>

@@ -1,0 +1,58 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <!-- <tr>
+            <td>
+                <label>Show ID</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="showID" class="form-control">
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="getshowbyid()">Search</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span style="color: red;">{{errMsg}}</span>
+            </td>
+        </tr> -->
+    </table>
+    <hr>
+    <table class="table" *ngIf="isShowExist">
+        <tr>
+            <td>Show ID</td>
+            <td>
+                <input type="number" [(ngModel)]="show.showID" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Multiplex ID</td>
+            <td>
+                <input type="number" [(ngModel)]="show.mulID"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Movie ID</td>
+            <td>
+                <input type="number" [(ngModel)]="show.movieID"  class="form-control">
+            </td>
+        </tr><tr>
+            <td>Show DateTime</td>
+            <td>
+                <input type="Date" [(ngModel)]="show.showDateTime"  class="form-control">
+            </td>
+        </tr><tr>
+            <td>Available Seats</td>
+            <td>
+                <input type="number" [(ngModel)]="show.availableSeats"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" (click)="edit()">Edit</button> &nbsp;
+                <button class="btn btn-primary" (click)="delete()">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+</div>

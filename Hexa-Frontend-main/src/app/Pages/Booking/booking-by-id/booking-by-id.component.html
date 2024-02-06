@@ -1,0 +1,60 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+        <tr>
+            <td>
+                <label>Booking ID</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="bookingID" class="form-control">
+            </td>
+            <td>
+                <button class="btn btn-primary" (click)="getbookingbyid()">Search</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <span style="color: red;">{{errMsg}}</span>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table class="table" *ngIf="isBookingExist">
+        <tr>
+            <td>Booking ID</td>
+            <td>
+                <input type="number" [(ngModel)]="booking.bookingID" readonly class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Amount</td>
+            <td>
+                <input type="number" [(ngModel)]="booking.amount"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Booking DateTime</td>
+            <td>
+                <input type="Date" [(ngModel)]="booking.bookingDateTime"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Show ID</td>
+            <td>
+                <input type="number" [(ngModel)]="booking.showID"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>User ID</td>
+            <td>
+                <input type="text" [(ngModel)]="booking.userID"  class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" (click)="edit()">Edit</button> &nbsp;
+                <button class="btn btn-primary" (click)="delete()">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Wallet Amount</h2>
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>Wallet ID</th>
+                <th>Balance</th>
+                <th>User ID</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let wallet of wallets">
+                <td>{{wallet.walletID}}</td>
+                <td>{{wallet.balance}}</td>
+                <td>{{wallet.userID}}</td>
+                <td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

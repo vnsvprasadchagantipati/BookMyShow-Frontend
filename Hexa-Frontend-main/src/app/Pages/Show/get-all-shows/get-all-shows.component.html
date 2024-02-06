@@ -1,0 +1,28 @@
+<div class="container">
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <!-- <th>Show ID</th> -->
+                <!-- <th>Multiplex ID</th> -->
+                <!-- <th>Movie ID</th> -->
+                <th>Show DateTime</th>
+                <th>Available Seats</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let show of shows">
+                <!-- <td>{{show.showID}}</td> -->
+                <!-- <td>{{show.mulID}}</td> -->
+                <!-- <td>{{show.movieID}}</td> -->
+                <td>{{show.showDateTime|date:'dd/MM/YYYY'}}</td>
+                <td>{{show.availableSeats}}</td>
+                <td>
+                    <button class="btn btn-info" (click)="getId(show.showID)">Edit</button> &nbsp;
+                    <button class="btn btn-primary" (click)="delete(show.showID)">Delete</button> &nbsp;
+                    <button class="btn btn-secondary" (click)="getId(show.showID)">View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

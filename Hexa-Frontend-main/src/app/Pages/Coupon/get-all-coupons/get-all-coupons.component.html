@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>Coupon ID</th>
+                <th>Code</th>
+                <th>Discount</th>
+                <th>Expiration Date</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let coupon of coupons">
+                <td>{{coupon.couponID}}</td>
+                <td>{{coupon.code}}</td>
+                <td>{{coupon.discount}}</td>
+                <td>{{coupon.expirationDate}}</td>
+                <td>{{coupon.description}}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="delete(coupon.couponID)">Delete</button> &nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

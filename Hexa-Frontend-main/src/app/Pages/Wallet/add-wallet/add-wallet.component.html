@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table">
+        <tr>
+            <td>Wallet ID</td>
+            <td>
+                <input type="number" [(ngModel)]="wallet.walletID">
+            </td>
+        </tr>
+        <tr>
+            <td>Balance</td>
+            <td>
+                <input type="number" [(ngModel)]="wallet.balance">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="addWallet()">Add</button>
+            </td>
+        </tr>
+
+    </table>
+</div>
